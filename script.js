@@ -21,7 +21,7 @@ function createCard(taskInfo) {
   const taskDescription = document.createElement("p");
 
   // Adicionando o titulo da tarefa como texto do paragrafo
-  p.innerText = taskInfo.titulo;
+  taskDescription.innerText = taskInfo.title;
 
   // Adicionando span e paragrafo a div
   taskCardContent.appendChild(taskTitle);
@@ -33,7 +33,7 @@ function createCard(taskInfo) {
   // Adicionando icone ao botão
   buttonDelete.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
 
-  /// Adicionando a div e o botão de deletar ao list item
+  // Adicionando a div e o botão de deletar ao list item
   taskCardItem.appendChild(taskCardContent);
   taskCardItem.appendChild(buttonDelete);
 
@@ -42,23 +42,15 @@ function createCard(taskInfo) {
 
 function renderElements(taskList) {
   const htmlList = document.querySelector(".tasks");
-  htmlList.innerHTML = "";
 
   // Ajustar a lógica
 
+  let card
+
   for(let i=0; i<taskList.length; i++) {
-
-    let card = createCard(taskList[i]);
-    htmlList.appendChild(card);
-
-    card = createCard(taskList[i]);
-    htmlList.appendChild(card);
-
     card = createCard(taskList[i]);
     htmlList.appendChild(card);
   }
-
-
 }
 
 renderElements(tasks);
