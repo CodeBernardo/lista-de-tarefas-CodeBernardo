@@ -117,10 +117,14 @@ section h2{
   border: none;
   background:rgb(220, 220, 220);
   color:rgb(150, 150, 150);
-  padding: 4px 6px;
+  padding: 0px;
   border-radius: 4px;
 }
 
 button{
   cursor: pointer;
+}
+
+i {
+  padding: 4px 6px;
 }
